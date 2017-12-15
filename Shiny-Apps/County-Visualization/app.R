@@ -1,7 +1,3 @@
-install.packages('shiny')
-install.packages('maps')
-install.packages('mapproj')
-
 library(shiny)
 library(maps)
 library(mapproj)
