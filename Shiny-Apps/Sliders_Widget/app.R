@@ -4,10 +4,10 @@ x <- read.csv('data/tenant.csv', header = TRUE)
 
 # User interface ----
 ui <- fluidPage(
-  titlePanel("Tenant Visualization"),
+  titlePanel("Sliders Widget Example"),
   sidebarLayout(
     sidebarPanel(
-      helpText("Create demographic maps with information from the 2010 US Census."),
+      helpText("This Shiny app demonstrates how to use of the slider widget."),
       sliderInput("range", label = "ID Range:", min = 1, max = nrow(x), value = c(1, nrow(x)))
     ),
     

@@ -5,15 +5,16 @@ highlights <- read.csv('data/user_book_highlight.csv', header = TRUE)
 
 # User interface ----
 ui <- fluidPage(
-  titlePanel("Bookmark & Highlight Usage Information"),
+  titlePanel("Select Box & Checkbox Example"),
   sidebarLayout(
     sidebarPanel(
+      helpText("This Shiny app demonstrates how to use the select box and checkbox widgets."),
       checkboxGroupInput(inputId = "checkbox", 
                          label = h3("Display information about"), 
                          choices = list("Bookmarks" = 1, "Highlights" = 2), 
                          selected = 1),
       selectInput(inputId = "var", 
-                  label = "Display information by",
+                  label = "Group information by",
                   choices = c("Book", "User"), 
                   selected = "Book")
     ),
