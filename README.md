@@ -14,11 +14,14 @@ This exemplar contains the following [Shiny apps](https://shiny.rstudio.com/):
     * [Lesson 5 - Use R Scripts and Data](https://shiny.rstudio.com/tutorial/written-tutorial/lesson5/)
 * [Shiny Articles/Guides](https://shiny.rstudio.com/articles/)
   * [Application Layout Guide](https://shiny.rstudio.com/articles/layout-guide.html)
+* [Shiny Dashboard](https://rstudio.github.io/shinydashboard/)
 * [Deploying Shiny Apps](https://shiny.rstudio.com/deploy/)
   * [RStudio - Put Shiny Web Apps Online](https://www.rstudio.com/products/shiny/shiny-server/)
   * Docker Containers
     * My own Docker image
-    * [Rocker/Shiny](https://hub.docker.com/r/rocker/shiny/~/dockerfile/)
+      * Based on the Rocker/Shiny and the following video:  [RStudio Server running on AWS](https://www.youtube.com/watch?v=zJuFpqB01u4)
+    * [Rocker/Shiny](https://hub.docker.com/r/rocker/shiny/)
+      * sudo docker run --rm -p 80:3838 -v /home/ubuntu/Shiny-Exemplar/Shiny-Apps/:/srv/shiny-server/ rocker/shiny
 * R Markdown
   * [R Markdown Articles](http://rmarkdown.rstudio.com/articles.html)
   * [R Markdown Gallery](http://rmarkdown.rstudio.com/gallery.html)
