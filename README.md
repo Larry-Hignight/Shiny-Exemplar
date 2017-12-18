@@ -1,7 +1,29 @@
 # Shiny-Exemplar
 
 This exemplar contains the following [Shiny apps](https://shiny.rstudio.com/):
-*
+* TODO
+
+## Docker
+
+Initially, I used the rocker/shiny image available on Dockerhub.  However, because I was unable to install additional R packages, I eventually created my own Docker image based on the rocker/shiny image.  The Dockerfile is included in this repository.
+
+* Docker Commands:
+  * sudo docker build -t shiny-exemplar .
+  * sudo docker run --rm -p 80:3838 -v /home/ubuntu/Shiny-Exemplar/Shiny-Apps/:/srv/shiny-server/ shiny-exemplar
+  * Based on the Rocker/Shiny and the following video:  [RStudio Server running on AWS](https://www.youtube.com/watch?v=zJuFpqB01u4)
+  * [Rocker/Shiny](https://hub.docker.com/r/rocker/shiny/) - The image that my image is based on.
+    * sudo docker run --rm -p 80:3838 -v /home/ubuntu/Shiny-Exemplar/Shiny-Apps/:/srv/shiny-server/ rocker/shiny
+
+* Notes
+  * The server has a directory listing of the running Shiny apps (ie http://localhost)
+  * Each app is running as a separate URI resource (ie http://localhost/app-name)
+
+This is the command suggested on the dockerhub page:
+ docker run --rm -p 3838:3838 \
+       -v /home/ubuntu/Adtalem/Analytics-Shiny-Demo/County-Visualization:/srv/shiny-server/ \
+       -v /srv/shinylog/:/var/log/shiny-server/ \
+       rocker/shiny
+
 
 ## Links
 * [Shiny Tutorials](https://shiny.rstudio.com/tutorial/)
@@ -17,11 +39,6 @@ This exemplar contains the following [Shiny apps](https://shiny.rstudio.com/):
 * [Shiny Dashboard](https://rstudio.github.io/shinydashboard/)
 * [Deploying Shiny Apps](https://shiny.rstudio.com/deploy/)
   * [RStudio - Put Shiny Web Apps Online](https://www.rstudio.com/products/shiny/shiny-server/)
-  * Docker Containers
-    * My own Docker image
-      * Based on the Rocker/Shiny and the following video:  [RStudio Server running on AWS](https://www.youtube.com/watch?v=zJuFpqB01u4)
-    * [Rocker/Shiny](https://hub.docker.com/r/rocker/shiny/)
-      * sudo docker run --rm -p 80:3838 -v /home/ubuntu/Shiny-Exemplar/Shiny-Apps/:/srv/shiny-server/ rocker/shiny
 * R Markdown
   * [R Markdown Articles](http://rmarkdown.rstudio.com/articles.html)
   * [R Markdown Gallery](http://rmarkdown.rstudio.com/gallery.html)
