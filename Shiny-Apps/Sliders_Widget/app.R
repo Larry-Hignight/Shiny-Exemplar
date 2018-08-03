@@ -10,7 +10,6 @@ ui <- fluidPage(
       helpText("This Shiny app demonstrates how to use of the slider widget."),
       sliderInput("range", label = "ID Range:", min = 1, max = nrow(x), value = c(1, nrow(x)))
     ),
-    
     mainPanel(tableOutput("table"))
   )
 )
